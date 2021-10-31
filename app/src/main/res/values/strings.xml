@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Android_registration</string>
+    <string name="name_info">Name: %s</string>
+    <string name="email_info">Email: %s</string>
+    <string name="pass1">Pass1</string>
+    <string name="pass2">Pass2</string>
+<string name="final_result">result: </string>
+</resources>
