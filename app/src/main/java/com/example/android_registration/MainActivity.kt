@@ -20,32 +20,35 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun CheckInfo() {
+    private fun CheckInfo() {
 
 
         val name = binding.textView.text
         val email = binding.editTextTextEmailAddress.text
         val date = binding.date1.text
-
-
         val pass = binding.editTextTextPassword.text.toString()
         val pass2 = binding.editTextTextPassword2.text.toString()
-
-
-        var gender = when (binding.gender.checkedRadioButtonId){
+        val password = pass == pass2
+        val gender = when (binding.gender.checkedRadioButtonId) {
             R.id.male -> "male"
-            R.id.female ->"female"
+            R.id.female -> "female"
 
-            else ->""
+            else -> ""
         }
-        var information = if ((name.isNotBlank() && email.isNotEmpty() && date.isNotEmpty() ) && (pass == pass2)) {
-            binding.finalResult.text = ("$name \n $email \n $date \n$gender")
-            return
-        } else {
-            println("ERROR!!!\nPlease enter all the information")
-            binding.finalResult.text = ("ERROR!!\nPLEASE ENTER ALL INFORMATION CORRECTLY!")
-            return
-        }
+        var information =
+            if (name.isNotEmpty() && (email.contains("@") && email.contains(".")) && date.isNotEmpty() && pass.isNotEmpty() && pass2.isNotEmpty() && password) {
+                "$name \n $email \n $date \n$gender"
+
+            } else if (!password) {
+                "ERROR!!!\nPlease enter all the information"
+
+
+            } else {
+
+                "ERROR!!!\nPlease enter all the information"
+
+
+            }
 //{//fun returnpass(var password:String) {
 //    val password = if (pass != pass2) {
 //        println("password not matched")
@@ -56,7 +59,7 @@ class MainActivity : AppCompatActivity() {
 //}
 
 
-        binding.finalResult.text = information.toString()
+        binding.finalResult.text = information
 
         //
 //        binding.finalResult.text = getString(R.string.name_info, name)
