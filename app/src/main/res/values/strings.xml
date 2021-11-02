@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Android_registration</string>
+    <string name="app_name">Register</string>
     <string name="name_info">Name: %s</string>
     <string name="email_info">Email: %s</string>
     <string name="pass1">Pass1</string>

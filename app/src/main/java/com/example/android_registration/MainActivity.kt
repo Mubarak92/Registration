@@ -1,25 +1,66 @@
 package com.example.android_registration
 
 import android.annotation.SuppressLint
-import androidx.appcompat.app.AppCompatActivity
+import android.app.DatePickerDialog
+import android.app.TimePickerDialog
+import android.content.Intent
 import android.os.Bundle
-import android.provider.ContactsContract
+import android.widget.DatePicker
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.example.android_registration.databinding.ActivityMainBinding
+import java.util.*
 
 lateinit var binding: ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(){
+
+//    var day = 0
+//    var month = 0
+//    var year = 0
+//
+//    var savedday = 0
+//    var savedmonth = 0
+//    var savedyear = 0
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+//
+//        pickDate()
         binding.button.setOnClickListener { CheckInfo() }
 
-    }
 
+//    }
+//    private fun getDateTimeCalender(){
+//        val cal=Calendar.getInstance()
+//        day = cal.get(Calendar.DAY_OF_MONTH)
+//        month = cal.get(Calendar.MONTH)
+//        year = cal.get(Calendar.YEAR)
+//    }
+//private fun pickDate(){
+//
+////    btn_timePicker.setOnClickListner {
+////        getDateTimeCalender()
+//
+//        DatePickerDialog(this,this,year,month,day).show()
+//    }
+//}
+//
+//    override fun onDateSet(view: DatePicker?, year: Int, month: Int, dayOfMonth: Int) {
+//
+//
+////        savedday = dayOfMonth
+////        dayOfMonth = month
+////        savedday = year
+////
+////        tv_
+
+    }
     private fun CheckInfo() {
 
 
@@ -36,11 +77,11 @@ class MainActivity : AppCompatActivity() {
             else -> ""
         }
         var information =
-            if (name.isNotEmpty() && (email.contains("@") && email.contains(".")) && date.isNotEmpty() && pass.isNotEmpty() && pass2.isNotEmpty() && password) {
+            if (name!!.isNotEmpty() && (email!!.contains("@") && email.contains(".com")) && date!!.isNotEmpty() && pass.isNotEmpty() && pass2.isNotEmpty()) {
                 "$name \n $email \n $date \n$gender"
 
             } else if (!password) {
-                "ERROR!!!\nPlease enter all the information"
+                "ERROR!!!\nPlease enter password "
 
 
             } else {
