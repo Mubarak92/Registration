@@ -35,6 +35,7 @@ class MainActivity : AppCompatActivity(){
         binding.button.setOnClickListener { CheckInfo() }
 
 
+
 //    }
 //    private fun getDateTimeCalender(){
 //        val cal=Calendar.getInstance()
@@ -64,11 +65,11 @@ class MainActivity : AppCompatActivity(){
     private fun CheckInfo() {
 
 
-        val name = binding.textView.text
-        val email = binding.editTextTextEmailAddress.text
-        val date = binding.date1.text
-        val pass = binding.editTextTextPassword.text.toString()
-        val pass2 = binding.editTextTextPassword2.text.toString()
+        val name = binding.textViewEditText.text
+        val email = binding.textViewEditText1.text
+        val date = binding.date1Editdate.text
+        val pass = binding.editTextTextPasswordEditText.text.toString()
+        val pass2 = binding.editTextTextPassword2EditText.text.toString()
         val password = pass == pass2
         val gender = when (binding.gender.checkedRadioButtonId) {
             R.id.male -> "male"
@@ -90,6 +91,7 @@ class MainActivity : AppCompatActivity(){
 
 
             }
+
 //{//fun returnpass(var password:String) {
 //    val password = if (pass != pass2) {
 //        println("password not matched")

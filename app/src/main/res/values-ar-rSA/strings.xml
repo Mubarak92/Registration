@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Register</string>
+    <string name="name_info">الاسم: s%</string>
+    <string name="email_info">البريد الالكتروني: %s</string>
+    <string name="pass1">ادخل كلمة المرور</string>
+    <string name="pass2">اعد ادخال كلمة المرور</string>
+    <string name="final_result">"الناتج "</string>
+    <string name="date">ادخل تاريخ الميلاد</string>
+    <string name="enter_username">"ادخل اسم المستخدم "</string>
+    <string name="hint_Enter_Email">ادخل البريد الالكتروني</string>
+    <string name="male">ذكر</string>
+    <string name="female">انثى</string>
+    <string name="signup">تسجيل</string>
+
+</resources>
